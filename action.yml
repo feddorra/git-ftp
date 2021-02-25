@@ -1,0 +1,19 @@
+name: 'Git FTP'
+description: 'Deployemnt via git-ftp'
+inputs:
+  url:
+    description: 'URL'
+    required: true
+  user:
+    description: 'FTP login'
+    required: true
+  password:
+    description: 'FTP password'
+    required: true
+  options:
+    description: 'Options'
+    required: false
+    default: '--auto-init'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
